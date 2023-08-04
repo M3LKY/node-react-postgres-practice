@@ -99,19 +99,18 @@ const Crud = () => {
 
     if (!id) {
       if (!name || !description) {
-        // If either name or description is empty, do not proceed with submission.
         console.log("HandleSubmit: Name and description cannot be empty");
         return;
       }
-      setIsSubmitting(true); // Disable the button during the submission process.
+      setIsSubmitting(true); 
 
       setCreateTodo().then(() => {
-        setIsSubmitting(false); // Re-enable the button after the submission is complete.
+        setIsSubmitting(false); 
         navigate("/");
       });
     } else {
       updateTodo().then(() => {
-        setIsSubmitting(false); // Re-enable the button after the submission is complete.
+        setIsSubmitting(false); 
         navigate("/");
       });
     }

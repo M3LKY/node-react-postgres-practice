@@ -60,13 +60,6 @@ const App = () => {
     })();
   };
 
-  /**
-   * mira melqui 
-   * name: test3 description: testing
-    SetCreateTodo: Name or description cannot be empty
-    el nom y des se estan cogiendo en el useState, pero por alguna razon no estan llegando a la funcion setcreatetodo
-   */
-
   return (
     <div>
       <div>
