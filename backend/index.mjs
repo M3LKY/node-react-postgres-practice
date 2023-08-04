@@ -1,17 +1,20 @@
 import express from "express";
 import cors from "cors";
 import pkg from "pg";
+import dotenv from 'dotenv'
 const { Pool } = pkg;
+dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors());
 
+
 const pool = new Pool({
-  user: "postgres",
-  database: "todos", 
-  password: "postgre123",
-  port: 5432,
-  host: "localhost",
+  user: process.env.user,
+  database: process.env.database, 
+  password: process.env.password,
+  port: process.env.port,
+  host: process.env.host,
 }); 
 
 app.get("/", async (req, res) => {
